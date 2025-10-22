@@ -173,20 +173,26 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".section-card");
+  let activeCard = null; // armazena o card atualmente com contorno
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
 
-        // Remove o contorno de todos os outros cards
-        cards.forEach(card => card.classList.remove("card-in-view"));
+        // Remove o contorno do card anterior com pequeno delay para suavizar
+        if (activeCard && activeCard !== entry.target) {
+          setTimeout(() => {
+            activeCard.classList.remove("card-in-view");
+          }, 200); // 200ms de delay para transição suave
+        }
 
-        // Adiciona o contorno apenas no card atual
+        // Adiciona o contorno no card atual
         entry.target.classList.add("card-in-view");
+        activeCard = entry.target;
       }
     });
   }, {
-    threshold: 0.50 // ativa assim que uma pequena parte do card aparece
+    threshold: 0.1 // ativa assim que qualquer parte do card aparece (mais responsivo)
   });
 
   // Observa cada card individualmente
@@ -195,8 +201,10 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
