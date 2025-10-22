@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGEEP - Sistema Integrado de Gerenciamento de Estoque Escolar Peccinini</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="bg-black text-gray-100">
+
+  <!-- ===== NAVBAR ===== -->
+
+  <nav class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md border-b border-red-800/40 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-3">
+      <a href="../../index.html" class="font-bold text-red-500 hover:text-red-600 transition">SIGEEP</a>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#descricao" class="hover:text-red-500 transition">Descrição</a></li>
+        <li><a href="#tecnologias" class="hover:text-red-500 transition">Tecnologias</a></li>
+        <li><a href="#funcionamento" class="hover:text-red-500 transition">Funcionamento</a></li>
+        <li><a href="#tecnicas" class="hover:text-red-500 transition">Técnico</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HEADER ===== -->
+
+  <header class="pt-28 pb-16 text-center relative overflow-hidden">
+    <div class="relative z-10 px-6">
+      <h1 class="text-5xl font-bold mb-3 animate-fade-in">SIGEEP</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">Sistema Integrado de Gerenciamento de Estoque Escolar Peccinini — controle eficiente, moderno e digital dos materiais escolares.</p>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-red-800/20 via-transparent to-black"></div>
+  </header>
+
+  <!-- ===== DESCRIÇÃO ===== -->
+
+  <section id="descricao" class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+    <div class="bg-neutral-900 rounded-2xl p-8 shadow-lg section-card">
+      <h2 class="text-3xl font-semibold mb-6 text-red-500">1. Descrição do Projeto</h2>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        O <strong>SIGEEP</strong> foi desenvolvido para gerenciar e automatizar o controle de estoque de materiais escolares, otimizando o processo de solicitação e aprovação de recursos dentro da escola. 
+        Ele integra aplicativo e site, promovendo eficiência, transparência e modernidade na gestão escolar.
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-400 mb-8">
+        <li>Centralização de solicitações e aprovações de materiais</li>
+        <li>Controle de estoque em tempo real</li>
+        <li>Histórico automatizado de movimentações</li>
+        <li>Interface moderna e intuitiva para todos os usuários</li>
+        <li>Transparência e eficiência na gestão dos recursos escolares</li>
+      </ul>
+      <div class="bg-neutral-800 p-4 rounded-xl border border-red-900/30">
+        <img src="../assets/img.gabriel.jpg" alt="Fluxograma ilustrativo do sistema SIGEEP" class="rounded-lg shadow-md mb-2 w-full md:w-3/4 mx-auto">
+        <p class="text-sm text-gray-400 text-center">Figura 1: Fluxograma do processo — Solicitação → Aprovação → Histórico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECNOLOGIAS ===== -->
+
+  <section id="tecnologias" class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+    <h2 class="text-3xl font-semibold mb-10 text-center text-red-500">2. Tecnologias Utilizadas</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+  <!-- Glide -->
+  <div class="bg-neutral-900 rounded-xl p-6 section-card border border-neutral-800 hover:border-red-700 transition">
+    <div class="flex items-center mb-4">
+      <img src="../assets/img.glide.jpeg" alt="Ícone do Glide" class="w-10 h-10 rounded mr-3">
+      <h3 class="text-lg font-bold text-white">Glide</h3>
+    </div>
+    <p class="text-gray-400 text-sm leading-relaxed">
+      Plataforma usada para desenvolver o aplicativo de forma visual e ágil, permitindo integração com planilhas e banco de dados sem necessidade de código.
+    </p>
+  </div>
+
+  <!-- Google Drive -->
+  <div class="bg-neutral-900 rounded-xl p-6 section-card border border-neutral-800 hover:border-red-700 transition">
+    <div class="flex items-center mb-4">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" alt="Ícone Google Drive" class="w-10 h-10 rounded mr-3">
+      <h3 class="text-lg font-bold text-white">Google Drive</h3>
+    </div>
+    <p class="text-gray-400 text-sm leading-relaxed">
+      Usado como banco de dados em nuvem, armazenando as informações de estoque, solicitações e histórico de forma segura e acessível em tempo real.
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <!-- ===== FUNCIONAMENTO ===== -->
+
+  <section id="funcionamento" class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+    <div class="bg-neutral-900 rounded-2xl p-8 section-card">
+      <h2 class="text-3xl font-semibold mb-6 text-red-500">3. Como Funciona</h2>
+      <p class="text-gray-300 mb-4">
+        O <strong>SIGEEP</strong> funciona de maneira simples e eficiente. Professores e funcionários podem realizar solicitações de materiais pelo aplicativo, que são automaticamente enviadas à direção para aprovação. 
+        Todas as movimentações ficam registradas no histórico do sistema, garantindo total rastreabilidade.
+      </p>
+      <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+        <li>Solicitação de materiais por professores e setores</li>
+        <li>Aprovação pela direção e registro automático</li>
+        <li>Controle de entrada e saída do estoque</li>
+        <li>Histórico de uso e rastreabilidade completa</li>
+      </ul>
+      <div class="bg-neutral-800 border border-red-900/30 p-5 rounded-xl text-center">
+        <p class="text-sm text-gray-400">Sistema projetado para garantir transparência, eficiência e controle digital em tempo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONSIDERAÇÕES TÉCNICAS ===== -->
+
+  <section id="tecnicas" class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+    <div class="bg-neutral-900 rounded-2xl p-8 section-card">
+      <h2 class="text-3xl font-semibold mb-6 text-red-500">4. Considerações Técnicas</h2>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        O sistema <strong>SIGEEP</strong> é baseado em nuvem e integra o <strong>Glide</strong> ao <strong>Google Drive</strong>, proporcionando uma estrutura confiável e de baixo custo. 
+        Seu design responsivo e sua atualização automática o tornam uma solução moderna para gestão escolar.
+      </p>
+
+  <ul class="list-disc list-inside text-gray-400 space-y-2 mb-8">
+    <li>Plataforma online — sem necessidade de instalação local</li>
+    <li>Integração em tempo real entre Glide e Google Drive</li>
+    <li>Design adaptável a dispositivos móveis e desktops</li>
+    <li>Registro histórico automático e seguro</li>
+  </ul>
+
+    <div class="bg-neutral-800 border-l-4 border-red-700 p-5 rounded-lg">
+      <h3 class="text-lg font-semibold text-red-400 mb-2">Link do Projeto</h3>
+      <p><a href="https://sigeep-beta.glide.page/" target="_blank" class="text-red-500 hover:text-red-400 underline">Acesse o aplicativo SIGEEP</a></p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer class="bg-black border-t border-red-900/40 text-gray-400 py-8 text-center">
+    <p class="mb-1 text-gray-200 font-medium">SIGEEP - Sistema Integrado de Gerenciamento de Estoque Escolar Peccinini</p>
+    <p class="text-sm mb-2">Projeto desenvolvido para a Amostra Técnica</p>
+    <p class="text-xs text-gray-500">
+      Integrantes: <span class="text-red-500 font-medium">Gabriel Santos Góes</span>, <span class="text-red-500 font-medium">Vinicius Soares Pinheiro</span>, 
+      <span class="text-red-500 font-medium">Antony Gabriel Funes</span> <br>
+      Documentação por <span class="text-red-500 font-medium">Taynara Souza</span> | © 2025
+    </p>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+
+  <script>
+    // Navbar com sombra ao rolar
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+      if (window.scrollY > 10) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
+    });
+  </script>
+
+</body>
+</html>
