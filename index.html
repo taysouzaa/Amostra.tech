@@ -170,30 +170,34 @@
 
   <script src="script.js"></script>
   
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".section-card");
 
-  // Cria um observador para detectar cards visíveis
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+
+        // Remove o contorno de todos os outros cards
+        cards.forEach(card => card.classList.remove("card-in-view"));
+
+        // Adiciona o contorno apenas no card atual
         entry.target.classList.add("card-in-view");
-      } else {
-        entry.target.classList.remove("card-in-view");
       }
     });
   }, {
-    threshold: 0.10 // ativa quando metade do card estiver visível
+    threshold: 0.1 // ativa assim que uma pequena parte do card aparece
   });
 
-  // Observa cada card
+  // Observa cada card individualmente
   cards.forEach(card => observer.observe(card));
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
