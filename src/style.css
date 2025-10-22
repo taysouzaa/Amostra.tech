@@ -197,6 +197,11 @@ animation: fadeUp 1s ease forwards;
 
 /* ===== Tablets e notebooks pequenos (max-width: 1024px) ===== */
 @media (max-width: 1024px) {
+  /* OCULTA O NAVBAR */
+  nav {
+    display: none;
+  }
+  
   header {
     padding: 4rem 2rem;
   }
@@ -212,35 +217,15 @@ animation: fadeUp 1s ease forwards;
   .section-card {
     padding: 1.8rem 1.4rem;
   }
-
-  nav ul {
-    gap: 1.5rem;
-  }
 }
 
 /* --- */
 
 /* ===== Tablets médios e celulares grandes (max-width: 768px) ===== */
 @media (max-width: 768px) {
-  /* NAVBAR - Melhorias para empilhamento */
-  nav .container {
-    width: 100%; 
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-    padding: 1rem;
-  }
-  
-  nav h1 {
-    font-size: 1.4rem;
-    margin-bottom: 0;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem 1.2rem; 
+  /* OCULTA O NAVBAR */
+  nav {
+    display: none;
   }
 
   header {
@@ -285,37 +270,11 @@ animation: fadeUp 1s ease forwards;
 
 /* ===== Celulares pequenos (max-width: 640px) ===== */
 @media (max-width: 640px) {
-  /* NAVBAR */
+  /* OCULTA O NAVBAR */
   nav {
-    padding: 0.8rem 0;
-  }
-
-  nav .container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 0 1rem;
-  }
-
-  nav h1 {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0;
+    display: none;
   }
   
-  nav ul li a {
-      font-size: 0.9rem;
-  }
-
-
   /* HEADER */
   header {
     padding: 2.5rem 1rem;
@@ -387,18 +346,16 @@ animation: fadeUp 1s ease forwards;
   }
 } 
 
-/* ===== CORREÇÃO DE CLICABILIDADE E SINTAXE ===== */
+/* ===== CORREÇÃO DE CLICABILIDADE (mantida) ===== */
 
 /* Garante que o link do botão no card fique acima do efeito de hover não-clicável */
 .section-card a.btn-primary {
   position: relative;
-  z-index: 15; /* Z-index maior que o 10 da regra geral */
+  z-index: 15;
   pointer-events: auto !important;
 }
 
-/* Regra geral para outros links, ajustada para evitar conflito */
+/* Regra geral para outros links */
 a {
   position: relative;
-  /* Não precisa de z-index alto aqui, o z-index 10 já é o padrão. */
-  /* Removendo 'pointer-events: auto !important;' do global para ser mais limpo */
 }
