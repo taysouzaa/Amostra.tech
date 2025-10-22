@@ -168,10 +168,35 @@
     lucide.createIcons();
   </script>
 
-  <script src="script.js"></script>
+  <script src="script.js"></script><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".section-card");
+
+  // Cria um observador para detectar cards visíveis
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("card-in-view");
+      } else {
+        entry.target.classList.remove("card-in-view");
+      }
+    });
+  }, {
+    threshold: 0.5 // ativa quando metade do card estiver visível
+  });
+
+  // Observa cada card
+  cards.forEach(card => observer.observe(card));
+});
+</script>
+
+
+
+  
 
 </body>
 </html>
+
 
 
 
