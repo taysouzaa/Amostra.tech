@@ -393,12 +393,13 @@ animation: fadeUp 1s ease forwards;
   footer .text-lg {
     font-size: 0.95rem;
   }
-
+} 
 /* botao */
 a {
   position: relative;
   z-index: 10;
   pointer-events: auto !important;
+}
 }
 
 
