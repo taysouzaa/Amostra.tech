@@ -180,11 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Remove o contorno do card anterior com leve atraso
+          // Remove o contorno do card anterior
           if (activeCard && activeCard !== entry.target) {
-            setTimeout(() => {
-              activeCard.classList.remove("card-in-view");
-            }, 200); // suaviza o desaparecimento
+            activeCard.classList.remove("card-in-view");
           }
 
           // Adiciona o contorno no novo card
@@ -193,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.1 // ativa assim que uma parte do card aparece
+      threshold: 0.1 // ativa assim que o card começa a aparecer
     });
 
     // Observa cada card individualmente
@@ -202,11 +200,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
-
-
 </body>
 </html>
+
 
 
 
