@@ -224,24 +224,22 @@ animation: fadeUp 1s ease forwards;
 @media (max-width: 768px) {
   /* NAVBAR - Melhorias para empilhamento */
   nav .container {
-    /* Opcional: Se 'container' for seu wrapper principal, garantir largura total e espaçamento */
     width: 100%; 
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5rem; /* Aumentei um pouco o gap entre o título e a lista */
+    gap: 0.5rem;
     padding: 1rem;
   }
   
   nav h1 {
     font-size: 1.4rem;
-    margin-bottom: 0; /* Removido o margin-bottom pois o gap no container gerencia o espaço */
+    margin-bottom: 0;
   }
 
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    /* Reduzindo o gap lateral para caber mais itens em uma linha, se for o caso */
     gap: 0.8rem 1.2rem; 
   }
 
@@ -260,7 +258,6 @@ animation: fadeUp 1s ease forwards;
   }
 
   .grid {
-    /* Mantendo 1 coluna para melhor visualização em retrato, ou altere para 2 se necessário */
     grid-template-columns: 1fr; 
     gap: 1.6rem;
   }
@@ -287,41 +284,41 @@ animation: fadeUp 1s ease forwards;
 }
 
 /* ===== Celulares pequenos (max-width: 640px) ===== */
-@media (max-width: 640px) { /* CORREÇÃO AQUI: Adicionado o '@' */
+@media (max-width: 640px) {
   /* NAVBAR */
   nav {
-    padding: 0.8rem; /* Removendo padding horizontal para deixar o container gerenciar */
+    padding: 0.8rem 0;
   }
 
   nav .container {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem; /* Um pouco mais de espaço */
-    padding: 0 1rem; /* Adicionado padding horizontal aqui */
+    gap: 0.8rem;
+    padding: 0 1rem;
   }
 
   nav h1 {
     font-size: 1.2rem;
-    margin-bottom: 0; /* Removido */
+    margin-bottom: 0;
     text-align: center;
   }
 
   nav ul {
-    flex-direction: column; /* Força os links a ficarem um abaixo do outro */
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem; /* Menos espaço entre os links da lista */
+    gap: 0.5rem;
     padding: 0;
   }
   
   nav ul li a {
-      font-size: 0.9rem; /* Opcional: ajustar tamanho do texto do link */
+      font-size: 0.9rem;
   }
 
 
   /* HEADER */
   header {
-    padding: 2.5rem 1rem; /* Um pouco menos de padding vertical */
+    padding: 2.5rem 1rem;
     text-align: center;
   }
 
@@ -333,7 +330,7 @@ animation: fadeUp 1s ease forwards;
   header p {
     font-size: 0.9rem;
     line-height: 1.5;
-    max-width: 95%; /* Ajustado */
+    max-width: 95%;
     margin: 0 auto;
   }
 
@@ -341,20 +338,17 @@ animation: fadeUp 1s ease forwards;
   .grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    /* Se a classe 'grid' tiver alguma largura ou margem definida fora daqui, 
-       isso pode ser necessário: */
-    /* width: 100%; */ 
   }
 
   .section-card {
     width: 100%;
-    max-width: none; /* Garante que o max-width anterior não atrapalhe */
+    max-width: none;
     padding: 1.2rem;
     border-radius: 1rem;
   }
 
   .section-card h3 {
-    font-size: 1.1rem; /* Aumentei um pouco para melhor legibilidade */
+    font-size: 1.1rem;
   }
 
   .section-card p {
@@ -372,16 +366,16 @@ animation: fadeUp 1s ease forwards;
   }
 
   section#contato h2 {
-    font-size: 1.5rem; /* Aumentei um pouco */
+    font-size: 1.5rem;
   }
 
   section#contato p {
-    font-size: 0.9rem; /* Aumentei um pouco */
+    font-size: 0.9rem;
   }
 
   /* FOOTER */
   footer {
-    padding: 1.5rem 1rem; /* Reduzi o padding vertical */
+    padding: 1.5rem 1rem;
   }
 
   footer p {
@@ -392,16 +386,19 @@ animation: fadeUp 1s ease forwards;
     font-size: 0.95rem;
   }
 } 
-/* botao */
-a {
+
+/* ===== CORREÇÃO DE CLICABILIDADE E SINTAXE ===== */
+
+/* Garante que o link do botão no card fique acima do efeito de hover não-clicável */
+.section-card a.btn-primary {
   position: relative;
-  z-index: 10;
+  z-index: 15; /* Z-index maior que o 10 da regra geral */
   pointer-events: auto !important;
 }
+
+/* Regra geral para outros links, ajustada para evitar conflito */
+a {
+  position: relative;
+  /* Não precisa de z-index alto aqui, o z-index 10 já é o padrão. */
+  /* Removendo 'pointer-events: auto !important;' do global para ser mais limpo */
 }
-
-
-
-
-
-
