@@ -229,7 +229,7 @@ animation: fadeUp 1s ease forwards;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.2rem; /* Aumentei um pouco o gap entre o título e a lista */
+    gap: 0.5rem; /* Aumentei um pouco o gap entre o título e a lista */
     padding: 1rem;
   }
   
@@ -246,7 +246,7 @@ animation: fadeUp 1s ease forwards;
   }
 
   header {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
   }
 
   header h1 {
@@ -399,6 +399,7 @@ a {
   pointer-events: auto !important;
 }
 }
+
 
 
 
