@@ -282,29 +282,6 @@ animation: fadeUp 1s ease forwards;
 }
 
 /* ===== Celulares pequenos ===== */
-@media (max-width: 640px) {
-  /* NAVBAR */
-  nav {
-    padding: 0.8rem 0.5rem;
-  }
-
-  nav .container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-  }
-
-  nav h1 {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
 
   /* HEADER */
   header {
@@ -386,4 +363,5 @@ a {
   z-index: 10;
   pointer-events: auto !important;
 }
+
 
