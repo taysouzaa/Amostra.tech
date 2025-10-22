@@ -195,9 +195,7 @@ animation: fadeUp 1s ease forwards;
 
 /* ===== RESPONSIVIDADE ===== */
 
-/* ===== RESPONSIVIDADE CORRIGIDA ===== */
-
-/* ===== Tablets e notebooks pequenos ===== */
+/* ===== Tablets e notebooks pequenos (max-width: 1024px) ===== */
 @media (max-width: 1024px) {
   header {
     padding: 4rem 2rem;
@@ -220,25 +218,31 @@ animation: fadeUp 1s ease forwards;
   }
 }
 
-/* ===== Tablets médios e celulares grandes ===== */
+/* --- */
+
+/* ===== Tablets médios e celulares grandes (max-width: 768px) ===== */
 @media (max-width: 768px) {
+  /* NAVBAR - Melhorias para empilhamento */
   nav .container {
+    /* Opcional: Se 'container' for seu wrapper principal, garantir largura total e espaçamento */
+    width: 100%; 
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 1.2rem; /* Aumentei um pouco o gap entre o título e a lista */
     padding: 1rem;
   }
-
+  
   nav h1 {
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0; /* Removido o margin-bottom pois o gap no container gerencia o espaço */
   }
 
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.9rem;
+    /* Reduzindo o gap lateral para caber mais itens em uma linha, se for o caso */
+    gap: 0.8rem 1.2rem; 
   }
 
   header {
@@ -256,7 +260,8 @@ animation: fadeUp 1s ease forwards;
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    /* Mantendo 1 coluna para melhor visualização em retrato, ou altere para 2 se necessário */
+    grid-template-columns: 1fr; 
     gap: 1.6rem;
   }
 
@@ -281,11 +286,44 @@ animation: fadeUp 1s ease forwards;
   }
 }
 
-/* ===== Celulares pequenos ===== */
+/* --- */
+
+/* ===== Celulares pequenos (max-width: 640px) ===== */
+@media (max-width: 640px) { /* CORREÇÃO AQUI: Adicionado o '@' */
+  /* NAVBAR */
+  nav {
+    padding: 0.8rem 0; /* Removendo padding horizontal para deixar o container gerenciar */
+  }
+
+  nav .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Um pouco mais de espaço */
+    padding: 0 1rem; /* Adicionado padding horizontal aqui */
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0; /* Removido */
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column; /* Força os links a ficarem um abaixo do outro */
+    align-items: center;
+    gap: 0.5rem; /* Menos espaço entre os links da lista */
+    padding: 0;
+  }
+  
+  nav ul li a {
+      font-size: 0.9rem; /* Opcional: ajustar tamanho do texto do link */
+  }
+
 
   /* HEADER */
   header {
-    padding: 2.8rem 1rem;
+    padding: 2.5rem 1rem; /* Um pouco menos de padding vertical */
     text-align: center;
   }
 
@@ -297,26 +335,28 @@ animation: fadeUp 1s ease forwards;
   header p {
     font-size: 0.9rem;
     line-height: 1.5;
-    max-width: 90%;
+    max-width: 95%; /* Ajustado */
     margin: 0 auto;
   }
 
   /* PROJETOS */
   .grid {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    justify-items: center;
+    /* Se a classe 'grid' tiver alguma largura ou margem definida fora daqui, 
+       isso pode ser necessário: */
+    /* width: 100%; */ 
   }
 
   .section-card {
     width: 100%;
+    max-width: none; /* Garante que o max-width anterior não atrapalhe */
     padding: 1.2rem;
     border-radius: 1rem;
   }
 
   .section-card h3 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Aumentei um pouco para melhor legibilidade */
   }
 
   .section-card p {
@@ -334,20 +374,20 @@ animation: fadeUp 1s ease forwards;
   }
 
   section#contato h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem; /* Aumentei um pouco */
   }
 
   section#contato p {
-    font-size: 0.85rem;
+    font-size: 0.9rem; /* Aumentei um pouco */
   }
 
   /* FOOTER */
   footer {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem; /* Reduzi o padding vertical */
   }
 
   footer p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   footer .text-lg {
@@ -355,13 +395,12 @@ animation: fadeUp 1s ease forwards;
   }
 }
 
-
-
 /* botao */
 a {
   position: relative;
   z-index: 10;
   pointer-events: auto !important;
 }
+
 
 
