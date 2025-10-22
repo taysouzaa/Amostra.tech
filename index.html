@@ -165,6 +165,54 @@
   </footer>
 
   <script>
+    <script>
+// Rolagem suave para âncoras
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Animação dos cards (Fade-in e Efeito de Contorno na Rolagem)
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.section-card');
+
+    // Define os limites de visibilidade: 0.2 para Fade-in, 0.5 para Contorno
+    const options = {
+        root: null, // viewport
+        rootMargin: '0px',
+        // Dispara a função quando 20% ou 50% do elemento está visível
+        threshold: [0.2, 0.5] 
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const card = entry.target;
+            
+            // 1. Lógica do Contorno Vermelho (Aplica quando >= 50% visível)
+            // Esta condição é a mais importante para o seu pedido.
+            if (entry.intersectionRatio >= 0.5) { 
+                card.classList.add('card-in-view');
+            } else {
+                card.classList.remove('card-in-view');
+            }
+            
+            // 2. Lógica do Fade-in (Aplica quando >= 20% visível)
+            // Se o card já tem uma animação CSS, esta parte pode ser opcional ou conflitante.
+            if (entry.intersectionRatio >= 0.2) { 
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }, options);
+
+    // Observa todos os cards
+    cards.forEach(card => observer.observe(card));
+});
     lucide.createIcons();
   </script>
 
@@ -172,5 +220,6 @@
 
 </body>
 </html>
+
 
 
