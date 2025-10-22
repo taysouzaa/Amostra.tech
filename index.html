@@ -172,7 +172,7 @@
   
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Aplica o efeito apenas em telas menores (celulares)
+  // Só aplica o efeito em telas de celular
   if (window.innerWidth <= 768) {
     const cards = document.querySelectorAll(".section-card");
     let activeCard = null;
@@ -185,23 +185,28 @@ document.addEventListener("DOMContentLoaded", () => {
             activeCard.classList.remove("card-in-view");
           }
 
-          // Adiciona o contorno no novo card
+          // Adiciona o contorno no card atual
           entry.target.classList.add("card-in-view");
           activeCard = entry.target;
+        } else {
+          // Remove o contorno quando o card sai da tela
+          entry.target.classList.remove("card-in-view");
         }
       });
     }, {
-      threshold: 0.1 // ativa assim que o card começa a aparecer
+      threshold: 0.05 // ativa logo quando a pontinha aparece
     });
 
-    // Observa cada card individualmente
+    // Observa todos os cards
     cards.forEach(card => observer.observe(card));
   }
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
