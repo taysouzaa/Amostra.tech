@@ -169,41 +169,11 @@
   </script>
 
   <script src="script.js"></script>
-  
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Só aplica o efeito em telas de celular
-  if (window.innerWidth <= 768) {
-    const cards = document.querySelectorAll(".section-card");
-    let activeCard = null;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Remove o contorno do card anterior
-          if (activeCard && activeCard !== entry.target) {
-            activeCard.classList.remove("card-in-view");
-          }
-
-          // Adiciona o contorno no card atual
-          entry.target.classList.add("card-in-view");
-          activeCard = entry.target;
-        } else {
-          // Remove o contorno quando o card sai da tela
-          entry.target.classList.remove("card-in-view");
-        }
-      });
-    });
-
-    // Observa todos os cards
-    cards.forEach(card => observer.observe(card));
-  }
-});
-</script>
 
 
 </body>
 </html>
+
 
 
 
