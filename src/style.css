@@ -286,13 +286,11 @@ animation: fadeUp 1s ease forwards;
   }
 }
 
-/* --- */
-
 /* ===== Celulares pequenos (max-width: 640px) ===== */
 @media (max-width: 640px) { /* CORREÇÃO AQUI: Adicionado o '@' */
   /* NAVBAR */
   nav {
-    padding: 0.8rem 0; /* Removendo padding horizontal para deixar o container gerenciar */
+    padding: 0.8rem; /* Removendo padding horizontal para deixar o container gerenciar */
   }
 
   nav .container {
@@ -401,6 +399,7 @@ a {
   pointer-events: auto !important;
 }
 }
+
 
 
 
