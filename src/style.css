@@ -91,7 +91,7 @@ box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
 /* ESTA É A CLASSE QUE CRIA O EFEITO NA ROLAGEM */
 .section-card.card-in-view {
     /* O destaque desejado, que aparece ao rolar na tela mobile */
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15, /* Contorno sólido vermelho */
+    box-shadow: 0 0 0 30px rgba(255, 0, 0, 0.15, /* Contorno sólido vermelho */
                 0 0 20px rgba(255, 0, 0, 0.5); /* Brilho forte */
     transform: translateY(0); /* Garante que não suba se houver conflito */
 }
@@ -371,6 +371,7 @@ animation: fadeUp 1s ease forwards;
 a {
   position: relative;
 }
+
 
 
 
