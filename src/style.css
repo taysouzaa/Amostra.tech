@@ -93,7 +93,7 @@ box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
     /* O destaque desejado, que aparece ao rolar na tela mobile */
     box-shadow: 0 0 0 3px #c31a1a, /* Contorno sólido vermelho */
                 0 0 30px rgba(255, 0, 0, 0.5); /* Brilho forte */
-    transform: translateY(0); /* Garante que não suba se houver conflito */
+    transform: translateY(1); /* Garante que não suba se houver conflito */
 }
 
 .section-card::before {
@@ -371,6 +371,7 @@ animation: fadeUp 1s ease forwards;
 a {
   position: relative;
 }
+
 
 
 
