@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Define dois thresholds:
         // 0.2 para o Fade-in (animação original)
         // 0.5 para o Contorno Vermelho (quando 50% do card está no centro da tela)
-        threshold: [0.2, 0.5] 
+        threshold: [0.2, 0.2] 
     };
 
     const observer = new IntersectionObserver(entries => {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // O contorno só faz sentido em mobile (telas menores), mas aplicamos a classe
             // e deixamos o CSS decidir se deve exibir.
             // Usamos entry.intersectionRatio >= 0.5 para corresponder ao threshold 0.5
-            if (entry.intersectionRatio >= 0.5) { 
+            if (entry.intersectionRatio >= 0.2) { 
                 card.classList.add('card-in-view');
             } else {
                 card.classList.remove('card-in-view');
@@ -63,3 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observa todos os cards
     cards.forEach(card => observer.observe(card));
 });
+
