@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Na Hora Certa - Gerenciamento de Projetos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .glow {
+      text-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-gray-100 selection:bg-red-600 selection:text-white">
+
+  <nav class="fixed top-0 left-0 w-full bg-neutral-900/90 backdrop-blur-sm shadow-md z-50 border-b border-red-600/30">
+    <div class="container mx-auto flex justify-between items-center px-6 py-3">
+      <h1 class="text-xl font-semibold text-red-500 tracking-wide">Desenvolvimento de Sistemas</h1>
+      <ul class="flex space-x-6 text-sm font-medium text-gray-300">
+        <li><a href="../src/index.html" class="hover:text-red-500 transition">Projetos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="relative text-center py-24 px-4 mt-12 overflow-hidden bg-neutral-900 border-b border-red-600/30">
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
+        <span class="text-red-500"> Na Hora Certa </span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-3xl mx-auto glow">
+        Plataforma completa para gerenciamento de entrdas e saídas de alunos.
+      </p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <span class="text-sm font-medium text-gray-300 px-3 py-1 bg-red-800/20 rounded-full border border-red-600/50">Base44</span>
+        <span class="text-sm font-medium text-gray-300 px-3 py-1 bg-red-800/20 rounded-full border border-red-600/50">Web App</span>
+        <span class="text-sm font-medium text-gray-300 px-3 py-1 bg-red-800/20 rounded-full border border-red-600/50">Low-Code</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-20 max-w-5xl">
+    
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-white mb-6 border-b border-red-600/40 pb-2">O Formúlario</h2>
+      <p class="text-gray-300 leading-relaxed">
+        A plataforma atua como um hub central para alunos, orientadores e coordenação, garantindo que todas as etapas sejam cumpridas dentro do cronograma estabelecido.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <div class="bg-neutral-900 p-6 rounded-xl border border-red-700/50">
+          <h3 class="flex items-center text-xl font-semibold text-red-500 mb-3"><i data-lucide="calendar-check" class="w-5 h-5 mr-2"></i> Funcionalidades Chave</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Cronograma Interativo (Gantt Chart ou similar)</li>
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Notificações de Prazos Próximos</li>
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Checklist de Documentação Obrigatória</li>
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Área de Upload e Feedback para Orientadores</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-900 p-6 rounded-xl border border-red-700/50">
+          <h3 class="flex items-center text-xl font-semibold text-red-500 mb-3"><i data-lucide="file-spreadsheet" class="w-5 h-5 mr-2"></i> Aspectos Técnicos e Design</h3>
+          <p class="text-gray-400 text-sm mb-2">Tecnologia: Desenvolvido integralmente na plataforma Base44.</p>
+          <p class="text-gray-400 text-sm mb-2">Recursos: Utilização de formulários dinâmicos, integração com banco de dados (planilhas) e geração de relatórios visuais.</p>
+          <p class="text-gray-400 text-sm">Design: Interface limpa, focada na usabilidade e na clareza do status do projeto para reduzir o estresse dos usuários.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="mb-16 text-center bg-red-900/10 p-8 rounded-xl border border-red-600/40">
+        <h3 class="text-2xl font-bold text-white mb-4">Acesse a Plataforma "Na Hora Certa"</h3>
+        <p class="text-gray-400 mb-6">Explore a funcionalidade completa do projeto através do link de demonstração abaixo.</p>
+        <a href="#" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-md text-lg font-bold shadow-2xl transition transform hover:scale-105">
+            <i data-lucide="external-link" class="w-6 h-6 mr-2 inline-block"></i> Ver Projeto
+        </a>
+    </section>
+
+    <div class="text-center mt-12">
+      <a href="../src/index.html" class="inline-flex items-center btn-primary bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-md text-base font-medium shadow-md transition border border-neutral-700">
+        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i> Voltar para Projetos
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="bg-black text-gray-400 py-10 text-center border-t border-red-600/30">
+    <p class="text-lg font-medium mb-2 text-white">Turma de <span class="text-red-500">Desenvolvimento de Sistemas</span></p>
+    <p class="text-sm">E.E. Gustavo Peccinini • Mostra Técnica 2025</p>
+    <p class="text-sm">Página Desenvolvida por <strong>Taynara Souza</strong></p>
+    <p class="text-sm">Desenvolvido por <strong> Laura, Yasmin, Leticia e Lanna. </strong></p>
+    <p class="text-xs mt-3 text-gray-500">© 2025 Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>

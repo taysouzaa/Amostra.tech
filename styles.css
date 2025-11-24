@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ================== RESET & BASE ================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f3f3f3;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1280px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajuste de padding padrão para o conteúdo principal */
+main {
+  padding: 6rem 1.5rem; 
+  transition: padding 0.3s ease;
+}
+
+/* ================== NAVBAR ================== */
+nav {
+  transition: all 0.3s ease;
+}
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.98); 
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3); 
+}
+
+/* ================== HERO / CABEÇALHO ================== */
+header {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 0, 0, 0.35), transparent 80%);
+  position: relative;
+  padding: 7rem 1rem 5rem; 
+  text-align: center;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 120%, rgba(255, 0, 0, 0.05), transparent 70%);
+  z-index: 0;
+}
+.glow {
+  text-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
+}
+
+/* ================== CARDS DE FUNCIONALIDADES ================== */
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  transform: translateY(0);
+  padding: 2.5rem; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 0, 0, 0.25);
+  border-color: #ef4444;
+}
+.feature-card h3 {
+  font-size: 1.6rem; 
+}
+.feature-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* ================== BOTÕES (CTA) ================== */
+.btn-primary {
+  background: linear-gradient(135deg, #ff4d4d 0%, #b91c1c 100%);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4); 
+  transition: all 0.3s ease;
+  padding: 0.9rem 2rem; 
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #ff4d4d 100%);
+  transform: translateY(-4px) scale(1.03); 
+  box-shadow: 0 15px 35px rgba(255, 0, 0, 0.6);
+}
+/* Seletor genérico para a seção de CTA com fundo vermelho/escuro */
+section[class*="bg-red-900"] a {
+    border: 2px solid transparent; 
+}
+section[class*="bg-red-900"] a:hover {
+    border: 2px solid #fff; 
+}
+
+/* ================== SEÇÃO GERAL E FOOTER ================== */
+section h2 {
+    font-size: 2.5rem;
+    transition: font-size 0.3s ease;
+}
+
+footer {
+  font-size: 0.9rem;
+  background: #000;
+  border-top: 3px solid rgba(255, 0, 0, 0.5); 
+  text-align: center;
+  padding: 3rem 1rem; 
+}
+
+/* ================== RESPONSIVIDADE APRIMORADA ================== */
+
+/* 1. Telas Médias (Desktops/Tablets Landscape) - Max 1024px */
+@media (max-width: 1024px) {
+  main {
+    padding: 5rem 2rem;
+  }
+  header h1 {
+    font-size: 3rem; 
+  }
+  section h2 {
+    font-size: 2.2rem; 
+  }
+}
+
+/* 2. Tablets (Portrait) e Smartphones Grandes (Max 768px) */
+@media (max-width: 768px) {
+  /* BASE */
+  main {
+    padding: 3.5rem 1.5rem; 
+  }
+  section h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* HEADER */
+  header {
+    padding: 5rem 1rem 3rem;
+  }
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  
+  /* NAVBAR - Força o empilhamento e centraliza */
+  nav .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+  }
+  nav h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.5rem; 
+  }
+  nav ul li a {
+      font-size: 0.9rem;
+  }
+
+  /* GRID - Empilhamento */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .feature-card {
+    padding: 1.8rem 1.5rem;
+  }
+}
+
+/* 3. Smartphones (Max 576px) - Ajustes de conteúdo principal */
+@media (max-width: 576px) {
+    /* HEADER */
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: 0.95rem;
+    }
+    
+    /* TAGS - Garante que tags sejam menores e se envolvam bem */
+    header .mt-8 {
+        flex-wrap: wrap;
+        margin-top: 1rem !important;
+    }
+    header .mt-8 span {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.6rem;
+        margin: 0.2rem;
+    }
+
+    /* TÍTULOS */
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* CARDS */
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+    .feature-card li {
+        font-size: 0.95rem;
+    }
+    
+    /* CTA BUTTON */
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.4rem;
+    }
+}
+
+/* 4. Celulares Ultra Pequenos (Max 400px) */
+@media (max-width: 400px) {
+    main {
+        padding: 3rem 0.8rem;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .feature-card {
+        padding: 1.2rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    footer {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Correção para o botão/link (Mantido) */
+a {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+}

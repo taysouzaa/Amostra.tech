@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGEEP - Estoque Escolar </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .glow {
+      text-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-gray-100 selection:bg-red-600 selection:text-white">
+
+  <nav class="fixed top-0 left-0 w-full bg-neutral-900/90 backdrop-blur-sm shadow-md z-50 border-b border-red-600/30">
+    <div class="container mx-auto flex justify-between items-center px-6 py-3">
+      <h1 class="text-xl font-semibold text-red-500 tracking-wide">Desenvolvimento de Sistemas</h1>
+      <ul class="flex space-x-6 text-sm font-medium text-gray-300">
+        <li><a href="../src/index.html" class="hover:text-red-500 transition">Projetos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="relative text-center py-24 px-4 mt-12 overflow-hidden bg-neutral-900 border-b border-red-600/30">
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
+        <span class="text-red-500">SIGEEP</span> - Estoque Escolar
+      </h1>
+      <p class="text-gray-400 text-lg max-w-3xl mx-auto glow">
+        Sistema Integrado de Gerenciamento de Estoque Escolar Peccinini — controle simplificado de materiais e requisições.
+      </p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <span class="text-sm font-medium text-gray-300 px-3 py-1 bg-red-800/20 rounded-full border border-red-600/50">Glide</span>
+        <span class="text-sm font-medium text-gray-300 px-3 py-1 bg-red-800/20 rounded-full border border-red-600/50">App/Web</span>
+        <span class="text-sm font-medium text-gray-300 px-3 py-1 bg-red-800/20 rounded-full border border-red-600/50">Low-Code</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-20 max-w-5xl">
+    
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-white mb-6 border-b border-red-600/40 pb-2">Visão Geral e Benefícios</h2>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        O SIGEEP foi criado para resolver a dificuldade na gestão de materiais e suprimentos em ambientes escolares. Ele combina um aplicativo móvel (para requisições rápidas) e uma interface web (para controle administrativo de estoque), garantindo que os materiais certos estejam disponíveis no momento certo.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <div class="bg-neutral-900 p-6 rounded-xl border border-red-700/50">
+          <h3 class="flex items-center text-xl font-semibold text-red-500 mb-3"><i data-lucide="scan" class="w-5 h-5 mr-2"></i> Funcionalidades Chave</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Registro de Entrada e Saída (Baixa de Estoque)</li>
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Sistema de Requisições por Usuário</li>
+            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-green-500"></i> Alertas Automáticos de Estoque Mínimo</li>
+          </ul>
+        </div>
+        <div class="bg-neutral-900 p-6 rounded-xl border border-red-700/50">
+          <h3 class="flex items-center text-xl font-semibold text-red-500 mb-3"><i data-lucide="database" class="w-5 h-5 mr-2"></i> Implementação Técnica</h3>
+          <p class="text-gray-400 text-sm mb-2">Plataforma: Glide. (Low-code)</p>
+          <p class="text-gray-400 text-sm mb-2">Back-end: Utiliza Google Sheets como banco de dados para flexibilidade.</p>
+          <p class="text-gray-400 text-sm">Diferencial: Acesso via app nativo ou navegador (Design adaptável a dispositivos móveis e desktops).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-4 border-b border-red-600/40 pb-2">Visualização do Projeto (Dashboard)</h2>
+        <div class="bg-neutral-900 p-4 rounded-xl border border-neutral-700/50">
+            <img src="../assets/img/img.gabriel.jpg" alt="Screenshot da tela principal do SIGEEP" class="w-full h-auto max-h-96 object-contain rounded-lg border border-red-600/40" style="object-fit: cover; max-height: 480px;">
+            <p class="text-center text-sm text-gray-500 mt-2">Tela de Dashboard/Inicial do sistema SIGEEP. (Substitua esta imagem)</p>
+        </div>
+    </section>
+
+    <section class="mb-16 text-center bg-red-900/10 p-8 rounded-xl border border-red-600/40">
+        <h3 class="text-2xl font-bold text-white mb-4">Acesse o Aplicativo SIGEEP Online</h3>
+        <p class="text-gray-400 mb-6">Explore a funcionalidade completa do projeto através do link de demonstração abaixo.</p>
+        <a href="https://sigeep-beta.glide.page/" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-md text-lg font-bold shadow-2xl transition transform hover:scale-105">
+            <i data-lucide="external-link" class="w-6 h-6 mr-2 inline-block"></i> Ver Projeto
+        </a>
+    </section>
+
+    <div class="text-center mt-12">
+      <a href="../src/index.html" class="inline-flex items-center btn-primary bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-md text-base font-medium shadow-md transition border border-neutral-700">
+        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i> Voltar para Projetos
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="bg-black text-gray-400 py-10 text-center border-t border-red-600/30">
+    <p class="text-lg font-medium mb-2 text-white">Turma de <span class="text-red-500">Desenvolvimento de Sistemas</span></p>
+    <p class="text-sm">E.E. Gustavo Peccinini • Mostra Técnica 2025</p>
+    <p class="text-sm">Página Desenvolvida por <strong> Taynara Souza. </strong></p>
+    <p class="text-sm">Desenvolvido por <strong> Integrantes: Vinícius Soares, Antony Gabriel. </strong></p>
+    <p class="text-xs mt-3 text-gray-500">© 2025 Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="../script.js"></script>
+
+</body>
+</html>
